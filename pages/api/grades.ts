@@ -23,8 +23,7 @@ export default async function handler(
       const data = await response.json();
       const grades: Grade[] = [];
 
-      for (let i = 0; i < data.length; i++) {
-        const course = data[i];
+      for (const course of data) {
         const grade = course.enrollments[0].computed_current_score;
 
         if (grade) {

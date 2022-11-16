@@ -82,7 +82,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Your Canvas Grades</h1>
+        <h1 className={styles.title}>Your VLC Grades</h1>
 
         <p className={styles.description}>
           An app by{" "}

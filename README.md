@@ -1,3 +1,5 @@
-Use your Canvas access token to view your VLC grades ([https://vlc.vercel.app](https://vlc.vercel.app))
+# VLC Grades ([View Live](https://vlc.vercel.app))
+
+Use your Canvas access token to view your VLC grades.
 
 This works for VLC students only (I think)

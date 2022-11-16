@@ -102,29 +102,27 @@ const Home: NextPage = () => {
                   <h1>Hello{username ? `, ${username}` : ""}</h1>
                   <h2>Your grades:</h2>
 
-                  {sort && (
-                    <div id="list">
-                      {sort === "highestFirst"
-                        ? grades
-                            .sort((a, b) => b.grade - a.grade)
-                            .map((grade, index) => {
-                              return (
-                                <p key={index}>
-                                  {grade.name}: {grade.grade}%
-                                </p>
-                              );
-                            })
-                        : grades
-                            .sort((a, b) => a.grade - b.grade)
-                            .map((grade, index) => {
-                              return (
-                                <p key={index}>
-                                  {grade.name}: {grade.grade}%
-                                </p>
-                              );
-                            })}
-                    </div>
-                  )}
+                  <div id="list">
+                    {sort === "highestFirst"
+                      ? grades
+                          .sort((a, b) => b.grade - a.grade)
+                          .map((grade, index) => {
+                            return (
+                              <p key={index}>
+                                {grade.name}: {grade.grade}%
+                              </p>
+                            );
+                          })
+                      : grades
+                          .sort((a, b) => a.grade - b.grade)
+                          .map((grade, index) => {
+                            return (
+                              <p key={index}>
+                                {grade.name}: {grade.grade}%
+                              </p>
+                            );
+                          })}
+                  </div>
 
                   <hr />
                   <p>

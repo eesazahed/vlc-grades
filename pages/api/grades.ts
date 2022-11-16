@@ -37,7 +37,7 @@ export default async function handler(
         grades: grades,
       });
     } catch {
-      return res.status(200).json({
+      return res.status(400).json({
         message: "Could not retrieve grades from Canvas.",
         type: "error",
       });

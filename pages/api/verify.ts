@@ -20,7 +20,7 @@ export default async function handler(
         type: "success",
       });
     } else {
-      return res.status(200).json({
+      return res.status(401).json({
         message: "Invalid access token.",
         type: "error",
       });

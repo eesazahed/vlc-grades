@@ -97,7 +97,7 @@ const Home: NextPage = () => {
         <div className={styles.main}>
           {token ? (
             <div className={styles.home}>
-              {grades && (
+              {grades ? (
                 <div className={styles.grades}>
                   <h1>Hello{username ? `, ${username}` : ""}</h1>
                   <h2>Your grades:</h2>
@@ -147,6 +147,8 @@ const Home: NextPage = () => {
                     </select>
                   </p>
                 </div>
+              ) : (
+                <p className={styles.description}>Loading...</p>
               )}
 
               <p

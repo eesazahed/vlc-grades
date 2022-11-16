@@ -15,6 +15,16 @@ export default async function handler(
         }
       );
 
+      const user = await fetch(
+        "https://canvas.instructure.com/api/v1/users/self",
+        {
+          headers: { Authorization: `Bearer ${CANVAS_TOKEN}` },
+        }
+      );
+
+      const userInfo = await user.json();
+      const username = userInfo.name.split(" ")[0] || userInfo.name;
+
       interface Grade {
         name: string;
         grade: number;
@@ -34,7 +44,8 @@ export default async function handler(
       return res.status(200).json({
         message: "Successfully retrieved Canvas courses.",
         type: "success",
-        grades: grades,
+        grades,
+        username,
       });
     } catch {
       return res.status(400).json({

@@ -23,14 +23,20 @@
 }
 
 .title,
-.description {
+.description,
+.footer {
   text-align: center;
 }
 
-.description {
+.description,
+.footer {
   margin: 4rem 0 0 0;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.footer {
+  font-size: 1rem;
 }
 
 .input,
@@ -66,7 +72,7 @@
 
 .grades {
   margin: 1rem;
-  padding: 2rem;
+  padding: 4rem 5rem 3rem 5rem;
   border: 1px solid;
   border-radius: 0.25rem;
 }
